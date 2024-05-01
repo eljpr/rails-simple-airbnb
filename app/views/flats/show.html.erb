@@ -1,0 +1,13 @@
+<h1><%= @flat.name %> </h1>
+<h3><%= @flat.address %> </h3>
+
+<div class="flat-card">
+  <h4>Details:</h4>
+  <i class="fa-solid fa-person"></i>
+  <span><%= @flat.number_of_guests %></span>
+  <i class="fa-solid fa-sterling-sign"></i>
+  <span><%= @flat.price_per_night%></span>
+  <p><%= @flat.description %></p>
+</div>
+
+<%= link_to "Remove", flat_path(@flat), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "ms-3 text-danger" %>
