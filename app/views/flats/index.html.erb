@@ -1,0 +1,14 @@
+<h1>All flats</h1>
+<ul>
+<% @flats.each do |flat|%>
+ <li>
+  <div><h4><%= flat.name %></h4></div>
+  <div><%= flat.address %></div>
+  <div><%= flat.description %></div>
+  <div class="d-flex justify-content-between">
+    <div> <i class="fa-solid fa-user-group"></i> <%= flat.number_of_guests %></div>
+    <div> <i class="fa-solid fa-sterling-sign"></i><%= flat.price_per_night %></div>
+  </div>
+ </li>
+<% end %>
+</ul>
